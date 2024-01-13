@@ -26,17 +26,14 @@ public class MainActivity extends AppCompatActivity {
         multiply = findViewById(R.id.btnMultiply);
         divide = findViewById(R.id.btnDivide);
 
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int firstValue, secondValue, ans;
+        add.setOnClickListener(view -> {
+            int firstValue, secondValue, ans;
 
-                firstValue = Integer.parseInt(etFirstValue.getText().toString());
-                secondValue = Integer.parseInt(etSecondValue.getText().toString());
+            firstValue = Integer.parseInt(etFirstValue.getText().toString());
+            secondValue = Integer.parseInt(etSecondValue.getText().toString());
 
-                ans=firstValue+secondValue;
-                tvAns.setText("Answer is "+ ans);
-            }
+            ans=firstValue+secondValue;
+            tvAns.setText("Answer is "+ ans);
         });
         subtract.setOnClickListener(new View.OnClickListener() {
             @Override
